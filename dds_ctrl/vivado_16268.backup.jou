@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Jun 19 17:12:47 2024
+# Process ID: 16268
+# Current directory: D:/Projects/ip_repo/dds_ctrl
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8804 D:\Projects\ip_repo\dds_ctrl\edit_dds_ctrl_v1_1.xpr
+# Log file: D:/Projects/ip_repo/dds_ctrl/vivado.log
+# Journal file: D:/Projects/ip_repo/dds_ctrl\vivado.jou
+# Running On: NateLaptop, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17053 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Projects/ip_repo/dds_ctrl/edit_dds_ctrl_v1_1.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file D:/Projects/ip_repo/dds_ctrl/dds_ctrl_1.1/component.xml
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::associate_bus_interfaces -busif M00_AXIS_1 -clock S00_AXI_CLK [ipx::current_core]
+ipx::associate_bus_interfaces -busif M00_AXIS_1 -clock S00_AXI_CLK [ipx::current_core]
+set_property name M00_AXIS [ipx::get_bus_interfaces M00_AXIS_1 -of_objects [ipx::current_core]]
+set_property abstraction_type_vlnv xilinx.com:interface:axis_rtl:1.0 [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:axis:1.0 [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+ipx::remove_port_map m00_axis_data_tdata [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+ipx::remove_port_map m00_axis_data_tvalid [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+ipx::remove_port_map m00_axis_data_tready [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+ipx::remove_port_map m00_axis_data_tlast [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+ipx::add_port_map TDATA [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+set_property physical_name m00_axis_data_tdata [ipx::get_port_maps TDATA -of_objects [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]]
+ipx::add_port_map TVALID [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+set_property physical_name m00_axis_data_tvalid [ipx::get_port_maps TVALID -of_objects [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]]
+ipx::add_port_map TLAST [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+set_property physical_name m00_axis_data_tlast [ipx::get_port_maps TLAST -of_objects [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]]
+ipx::add_port_map TREADY [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+set_property physical_name m00_axis_data_tready [ipx::get_port_maps TREADY -of_objects [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]]
+set_property name M00_AXIS_1 [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+ipx::associate_bus_interfaces -busif M00_AXIS_1 -clock S00_AXI_CLK [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/Projects/ip_repo/dds_ctrl/dds_ctrl_1.1
+set_property version 1.1 [ipx::current_core]
+set_property display_name dds_ctrl_v1.1 [ipx::current_core]
+set_property core_revision 5 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/Projects/ip_repo/dds_ctrl/dds_ctrl_1.1
+set_property core_revision 6 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/Projects/ip_repo/dds_ctrl/dds_ctrl_1.1
+set_property core_revision 7 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]

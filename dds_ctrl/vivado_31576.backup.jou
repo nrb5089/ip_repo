@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Jun 19 16:48:46 2024
+# Process ID: 31576
+# Current directory: D:/Projects/ip_repo/dds_ctrl
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10012 D:\Projects\ip_repo\dds_ctrl\edit_dds_ctrl_v1_1.xpr
+# Log file: D:/Projects/ip_repo/dds_ctrl/vivado.log
+# Journal file: D:/Projects/ip_repo/dds_ctrl\vivado.jou
+# Running On: NateLaptop, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17053 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Projects/ip_repo/dds_ctrl/edit_dds_ctrl_v1_1.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file D:/Projects/ip_repo/dds_ctrl/dds_ctrl_1.1/component.xml
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::remove_bus_interface M00_AXIS_DATA [ipx::current_core]
+ipx::create_abstraction_definition xilinx.com user M00_AXIS_rtl 1.0
+ipx::create_bus_definition xilinx.com user M00_AXIS 1.0
+set_property xml_file_name D:/Projects/ip_repo/dds_ctrl/M00_AXIS_rtl.xml [ipx::current_busabs]
+set_property xml_file_name D:/Projects/ip_repo/dds_ctrl/M00_AXIS.xml [ipx::current_busdef]
+set_property bus_type_vlnv xilinx.com:user:M00_AXIS:1.0 [ipx::current_busabs]
+ipx::save_abstraction_definition [ipx::current_busabs]
+ipx::save_bus_definition [ipx::current_busdef]
+set_property  ip_repo_paths  {d:/Projects/ip_repo/dds_ctrl/dds_ctrl_1.1 D:/Projects/ip_repo/dds_ctrl} [current_project]
+ipx::add_bus_abstraction_port m00_axis_data_tdata [ipx::current_busabs]
+ipx::add_bus_abstraction_port m00_axis_data_tvalid [ipx::current_busabs]
+ipx::add_bus_abstraction_port m00_axis_data_tready [ipx::current_busabs]
+ipx::add_bus_abstraction_port m00_axis_data_tlast [ipx::current_busabs]
+ipx::save_bus_definition [ipx::current_busdef]
+ipx::save_abstraction_definition [ipx::current_busabs]
+update_ip_catalog -rebuild
+update_ip_catalog
+ipx::infer_bus_interface {m00_axis_data_tdata m00_axis_data_tvalid m00_axis_data_tready m00_axis_data_tlast} xilinx.com:user:M00_AXIS:1.0 [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property version 1.2 [ipx::current_core]
+set_property display_name dds_ctrl_v1.2 [ipx::current_core]
+set_property description {Control aspects of dds via AXI-lite controlled registers.  1.2 adds the tlast bit to the master stream out.} [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
