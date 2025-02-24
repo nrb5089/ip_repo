@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../tunable_dds_1.0/src/dds_compiler_0/sim/dds_compiler_0.vhd" \
+
+nosort
